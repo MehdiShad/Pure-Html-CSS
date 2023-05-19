@@ -15,6 +15,7 @@ Fonts
 "Segeo UI" => windows system
 "Roboto" => android system 
 */
+
 @font-face {
     font-family: "vazir";
     src: url("../fonts/vazir/Vazir-Medium.woff2") format("woff2"),
@@ -37,13 +38,15 @@ Variables
 */
 
 :root {
-    --clr-primary: #af1495;
-    --clr-primary-light: #f114cd;
+    --clr-primary: #d61eb8;
+    --clr-primary-2: #3d14f1;
     --clr-gray-1: #102a42;
     --clr-grey-5: #617d98;
     --clr-grey-10: #f1f5f8;
     --clr-white: #fff;
     --ff-primary: "vazir", sans-serif;
+    --radius: 0.5rem;
+    --transition: all 3s linear;
 }
 
 body {
@@ -58,8 +61,77 @@ a {
     text-decoration: none;
 }
 
+h1 {
+    font-size: 1.75rem;
+}
 
+h2 {
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.75rem;
+    }
+}
+
+.btn {
+    background: var(--clr-primary);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius);
+    color: var(--clr-white);
+    transition: var(--transition);
+}
+.btn:hover{
+    background: var(--clr-primary-2);
+    color: var(--clr-primary)
+}
+/* 
+============================================
+Header
+============================================
+*/
+.header {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/header.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.banner {
+    width: 100%;
+    color: var(--clr-white);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.banner h1 {
+    color: var(--clr-primary);
+    margin-bottom: 2rem;
+}
+
+.banner h2 {
+    color: var(--clr-primary);
+    margin-bottom: 1.75rem;
+}
+
+.banner-btn {
+    font-size: 1.25rem;
+    outline: 0.125rem solid var(--clr-primary);
+    outline-offset: 0.25rem;
+    padding:  0.75rem 1.25rem;
+}
 
 p {
     font-family: 'vazir', -apple-system;
-} 
+}
