@@ -70,6 +70,10 @@ h2 {
   font-size: 1.5rem;
 }
 
+h4 {
+  font-size: 1rem;
+}
+
 @media screen and (min-width: 800px) {
   h1 {
     font-size: 2rem;
@@ -77,6 +81,9 @@ h2 {
 
   h2 {
     font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1.25rem;
   }
 }
 
@@ -146,4 +153,31 @@ Header
     var(--clr-primary-2),
     var(--clr-primary)
   );
+}
+
+
+/* 
+============================================
+Features
+============================================
+*/
+
+
+.features {
+  background: var(--clr-gray-10);
+}
+
+.feature {
+  text-align: center;
+}
+
+.feature-icon {
+  color: var(--clr-primary);
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  display: inline-block;
+}
+
+.feature-title {
+  margin-bottom: 1rem;
 }
