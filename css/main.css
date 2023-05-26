@@ -61,6 +61,10 @@ body {
 a {
   text-decoration: none;
 }
+img {
+  display: block;
+  width: 100%;
+}
 
 h1 {
   font-size: 1.75rem;
@@ -97,6 +101,7 @@ p {
   border-radius: var(--radius);
   color: var(--clr-white);
   transition: var(--transition);
+  display: inline-block;
 }
 .btn:hover {
   background: var(--clr-primary-2);
@@ -109,6 +114,27 @@ p {
   content: "";
   clear: both;
   display: block;
+}
+
+.section-center {
+  padding: 4rem 0;
+  width: 85vw;
+  margin: 0 auto;
+  max-width: 1366px;
+}
+
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+
+.section-title {
+  margin-bottom: 2rem;
+}
+
+.section-title h3 {
+  color: var(--clr-primary);
 }
 
 /* 
@@ -218,5 +244,48 @@ Features
   .feature {
     float: right;
     width: 25%;
+  }
+}
+
+/* 
+============================================
+About
+============================================
+*/
+
+.about-img, .about-info {
+  padding: 2rem 0;
+}
+
+.about-picture-container {
+  background: var(--clr-primary-2);
+  max-width: 30rem;
+  border: 0.3rem solid var(--clr-primary);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.about-picture {
+  transition: var(--transition);
+}
+
+.about-picture-container:hover .about-picture {
+  opacity: 0.8;
+  transform: scale(1.2);
+}
+
+.about-btn {
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 992px) {
+  .about-img {
+    float: left;
+    width: 50%;
+  }
+
+  .about-info {
+    float: right;
+    width: 50%;
   }
 }
