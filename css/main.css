@@ -140,6 +140,51 @@ p {
 
 /* 
 ============================================
+Animation
+============================================
+*/
+
+@keyframes bounce {
+   0% {
+    transform: scale(1);
+   }
+  
+   50% {
+    transform: scale(2);
+   }
+
+   100% {
+    transform: scale(1);
+   }
+}
+
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* 
+============================================
 Navbar
 ============================================
 */
@@ -152,6 +197,7 @@ Navbar
   right: 5%;
   z-index: 1;
   cursor: pointer;
+  animation: bounce 2s ease infinite;
 }
 
 .navbar{
@@ -253,11 +299,13 @@ Header
 .banner h1 {
   color: var(--clr-primary);
   margin-bottom: 2rem;
+  animation: slideFromTop 2s ease-in-out 1;
 }
 
 .banner h2 {
   color: var(--clr-primary);
   margin-bottom: 1.75rem;
+  animation: slideFromBottom 2s ease-in-out 1;
 }
 
 .banner-btn {
@@ -265,6 +313,7 @@ Header
   outline: 0.125rem solid var(--clr-primary);
   outline-offset: 0.25rem;
   padding: 0.75rem 1.25rem;
+  animation: slideFromBottom 2s ease-in-out 1;
 }
 
 .content-divider {
